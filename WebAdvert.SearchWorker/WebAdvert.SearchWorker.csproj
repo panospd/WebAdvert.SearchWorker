@@ -5,9 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AdvertApi.Models.panospd" Version="1.0.2" />
     <PackageReference Include="Amazon.Lambda.Core" Version="1.1.0" />
     <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.5.0" />
     <PackageReference Include="Amazon.Lambda.SNSEvents" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="NEST" Version="6.6.0" />
   </ItemGroup>
 
 </Project>
