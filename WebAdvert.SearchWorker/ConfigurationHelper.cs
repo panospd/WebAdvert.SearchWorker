@@ -8,7 +8,7 @@ namespace WebAdvert.SearchWorker
 {
     public static class ConfigurationHelper
     {
-        private static IConfiguration _configuration = null;
+        private static IConfiguration _configuration;
 
         public static IConfiguration Instance
         {
@@ -19,7 +19,7 @@ namespace WebAdvert.SearchWorker
                     _configuration =
                         new ConfigurationBuilder()
                             .SetBasePath(Directory.GetCurrentDirectory())
-                            .AddJsonFile("appsettings.json")
+                            .AddJsonFile("appsettings.json", false)
                             .Build();
                 }
 

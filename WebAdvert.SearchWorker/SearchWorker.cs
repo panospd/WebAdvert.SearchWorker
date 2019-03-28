@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using AdvertApi.Models.Messages;
 using Amazon.Lambda.Core;
@@ -28,6 +29,7 @@ namespace WebAdvert.SearchWorker
             foreach (var record in snsEvent.Records)
             {
                 context.Logger.LogLine(record.Sns.Message);
+                context.Logger.LogLine(Directory.GetCurrentDirectory());
 
                 var message = JsonConvert.DeserializeObject<AdvertConfirmedMessage>(record.Sns.Message);
                 var advertDocument = MappingHelper.Map(message);
